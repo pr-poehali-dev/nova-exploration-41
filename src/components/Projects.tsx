@@ -8,7 +8,12 @@ const projects = [
     category: "Двухместный · Standard",
     location: "Тёплые тона, утренний свет",
     year: "28 м²",
-    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0d1f1eb3-2467-4618-b247-c79823634ff3.png"],
+    images: [
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0e201921-495c-485b-a68b-33431a827104.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/96cef56d-a8f8-4b95-995e-63e2c42fb116.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/3efee01a-29bb-447d-ada2-8feb0086a2e2.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/d46f3ebe-47be-4af9-adbf-a1a8c4e2f360.png",
+    ],
   },
   {
     id: 2,
