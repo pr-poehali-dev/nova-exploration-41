@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: "Номер «Рассвет»",
-    category: "Двухместный · Standard",
+    category: "Стандарт",
     location: "Тёплые тона, утренний свет",
     year: "28 м²",
     images: [
@@ -18,7 +18,7 @@ const projects = [
   {
     id: 2,
     title: "Номер «Гавань»",
-    category: "Двухместный · Comfort",
+    category: "Люкс",
     location: "Мягкая палитра, уютная зона отдыха",
     year: "34 м²",
     images: [
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 3,
     title: "Номер «Палитра»",
-    category: "Семейный · Family",
+    category: "Стандарт",
     location: "Простор для всей семьи",
     year: "42 м²",
     images: [
@@ -45,7 +45,7 @@ const projects = [
   {
     id: 4,
     title: "Номер «Грань»",
-    category: "Люкс · Suite",
+    category: "Стандарт",
     location: "Лучший вид и максимум комфорта",
     year: "54 м²",
     images: [
