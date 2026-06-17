@@ -3,23 +3,23 @@ import { HighlightedText } from "./HighlightedText"
 
 const philosophyItems = [
   {
-    title: "Минимализм со смыслом",
+    title: "Камерная атмосфера",
     description:
-      "Каждый элемент имеет свое назначение и пространство для дыхания. Мы убираем лишнее, чтобы раскрыть то, что действительно важно.",
+      "Всего 4 номера на 158 м² — мы создаем приватную обстановку, где каждый гость чувствует себя единственным и желанным.",
   },
   {
-    title: "Архитектурный подход",
+    title: "Продуманный интерьер",
     description:
-      "Планировки, вдохновленные структурой, ритмом и материальностью. Здания, которые говорят через пропорции и свет.",
+      "Каждая деталь интерьера подобрана с заботой о вашем комфорте. Свет, фактуры и цвет складываются в гармоничное пространство для отдыха.",
   },
   {
-    title: "Естественная динамика",
+    title: "Уют как приоритет",
     description:
-      "Движение поддерживает восприятие, но никогда не отвлекает. Анимация, которая ощущается естественно, как свет, скользящий по комнате.",
+      "Мы тщательно распределили площади гостевых зон, чтобы вам было где уединиться и где провести время с близкими.",
   },
   {
-    title: "Вневременная эстетика",
-    description: "Элегантный, спокойный и долговечный визуальный язык. Дизайн, который превосходит тренды и стареет с достоинством.",
+    title: "Внимание к гостю",
+    description: "Успех отеля мы измеряем вашим хорошим настроением. Тёплый сервис и забота о деталях — наша визитная карточка.",
   },
 ]
 
@@ -53,11 +53,11 @@ export function Philosophy() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - Title and image */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наша философия</p>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наша концепция</p>
             <h2 className="text-6xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-              Дизайн с
+              Отдых с
               <br />
-              <HighlightedText>намерением</HighlightedText>
+              <HighlightedText>характером</HighlightedText>
             </h2>
 
             <div className="relative hidden lg:block">
@@ -72,7 +72,7 @@ export function Philosophy() {
           {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              Архитектура - это больше, чем конструкция. Это то, как мы воспринимаем мир. Мы создаем пространства, которые питают человеческий дух.
+              Хороший отель - это больше, чем стены и кровать. Это ощущение, с которым вы просыпаетесь. Мы создаём пространство, в которое хочется возвращаться.
             </p>
 
             {philosophyItems.map((item, index) => (
