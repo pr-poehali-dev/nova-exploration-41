@@ -48,7 +48,12 @@ const projects = [
     category: "Люкс · Suite",
     location: "Лучший вид и максимум комфорта",
     year: "54 м²",
-    images: ["/images/hously-4.png"],
+    images: [
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/69c2e797-2ff4-426a-bdb0-5a015a12999e.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/82adcd05-9ed2-4d6d-b0bb-7760177b8a02.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/187e8355-3edb-4812-b020-ad15c12e7f92.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/3bcfe048-52e1-4e55-ba13-0344ce30e539.png",
+    ],
   },
 ]
 
