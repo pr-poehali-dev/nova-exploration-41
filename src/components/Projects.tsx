@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
@@ -8,7 +8,7 @@ const projects = [
     category: "Двухместный · Standard",
     location: "Тёплые тона, утренний свет",
     year: "28 м²",
-    image: "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0d1f1eb3-2467-4618-b247-c79823634ff3.png",
+    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0d1f1eb3-2467-4618-b247-c79823634ff3.png"],
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const projects = [
     category: "Двухместный · Comfort",
     location: "Мягкая палитра, уютная зона отдыха",
     year: "34 м²",
-    image: "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/49951a72-9000-47a3-827b-d534b839f9f1.png",
+    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/49951a72-9000-47a3-827b-d534b839f9f1.png"],
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const projects = [
     category: "Семейный · Family",
     location: "Простор для всей семьи",
     year: "42 м²",
-    image: "/images/hously-3.png",
+    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/077992a1-ebd5-4828-b019-8b1d647f459f.png"],
   },
   {
     id: 4,
@@ -32,12 +32,94 @@ const projects = [
     category: "Люкс · Suite",
     location: "Лучший вид и максимум комфорта",
     year: "54 м²",
-    image: "/images/hously-4.png",
+    images: [
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/1c456d1e-fd3f-4e0f-823c-f8a54de36a20.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/2d8408b3-a1df-4f98-8e51-280da5b6be70.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/c15e3a3b-a116-4a9d-8dfe-ef54d1c3a118.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/f19a7e13-3351-40bb-a0ef-733ae060a097.png",
+    ],
   },
 ]
 
+function ProjectCard({ project, index, revealedImages, imageRef }: {
+  project: typeof projects[0]
+  index: number
+  revealedImages: Set<number>
+  imageRef: (el: HTMLDivElement | null) => void
+}) {
+  const [currentImg, setCurrentImg] = useState(0)
+  const [hovered, setHovered] = useState(false)
+  const hasMultiple = project.images.length > 1
+
+  const prev = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentImg((i) => (i - 1 + project.images.length) % project.images.length)
+  }
+  const next = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentImg((i) => (i + 1) % project.images.length)
+  }
+
+  return (
+    <article
+      className="group cursor-pointer"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div ref={imageRef} className="relative overflow-hidden aspect-[4/3] mb-6">
+        <img
+          src={project.images[currentImg]}
+          alt={project.title}
+          className={`w-full h-full object-cover transition-transform duration-700 ${hovered ? "scale-105" : "scale-100"}`}
+        />
+        <div
+          className="absolute inset-0 bg-primary origin-top"
+          style={{
+            transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
+            transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
+          }}
+        />
+        {hasMultiple && (
+          <>
+            <button
+              onClick={prev}
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+              {project.images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setCurrentImg(i) }}
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === currentImg ? "bg-white scale-125" : "bg-white/50"}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
+          <p className="text-muted-foreground text-sm">
+            {project.category} · {project.location}
+          </p>
+        </div>
+        <span className="text-muted-foreground/60 text-sm">{project.year}</span>
+      </div>
+    </article>
+  )
+}
+
 export function Projects() {
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set())
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
 
@@ -82,39 +164,13 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <article
+            <ProjectCard
               key={project.id}
-              className="group cursor-pointer"
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className={`w-full h-full object-cover transition-transform duration-700 ${
-                    hoveredId === project.id ? "scale-105" : "scale-100"
-                  }`}
-                />
-                <div
-                  className="absolute inset-0 bg-primary origin-top"
-                  style={{
-                    transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
-                    transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
-                  }}
-                />
-              </div>
-
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm">
-                    {project.category} · {project.location}
-                  </p>
-                </div>
-                <span className="text-muted-foreground/60 text-sm">{project.year}</span>
-              </div>
-            </article>
+              project={project}
+              index={index}
+              revealedImages={revealedImages}
+              imageRef={(el) => { imageRefs.current[index] = el }}
+            />
           ))}
         </div>
       </div>
