@@ -7,7 +7,7 @@ const projects = [
     title: "Номер «Рассвет»",
     category: "Стандарт",
     location: "Тёплые тона, утренний свет",
-    year: "28 м²",
+    year: "",
     images: [
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0e201921-495c-485b-a68b-33431a827104.png",
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/96cef56d-a8f8-4b95-995e-63e2c42fb116.png",
@@ -20,7 +20,7 @@ const projects = [
     title: "Номер «Гавань»",
     category: "Люкс",
     location: "Мягкая палитра, уютная зона отдыха",
-    year: "34 м²",
+    year: "",
     images: [
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/077992a1-ebd5-4828-b019-8b1d647f459f.png",
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/1c456d1e-fd3f-4e0f-823c-f8a54de36a20.png",
@@ -34,7 +34,7 @@ const projects = [
     title: "Номер «Палитра»",
     category: "Стандарт",
     location: "Простор для всей семьи",
-    year: "42 м²",
+    year: "",
     images: [
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/61553286-61f2-47ec-97e0-df9406f4281a.png",
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/dbd2de7f-6e8b-43bd-9a08-76b26c40b088.png",
@@ -47,7 +47,7 @@ const projects = [
     title: "Номер «Грань»",
     category: "Стандарт",
     location: "Лучший вид и максимум комфорта",
-    year: "54 м²",
+    year: "",
     images: [
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/69c2e797-2ff4-426a-bdb0-5a015a12999e.png",
       "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/82adcd05-9ed2-4d6d-b0bb-7760177b8a02.png",
