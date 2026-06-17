@@ -8,7 +8,7 @@ const projects = [
     category: "Двухместный · Standard",
     location: "Тёплые тона, утренний свет",
     year: "28 м²",
-    image: "/images/hously-1.png",
+    image: "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/0d1f1eb3-2467-4618-b247-c79823634ff3.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const projects = [
     category: "Двухместный · Comfort",
     location: "Мягкая палитра, уютная зона отдыха",
     year: "34 м²",
-    image: "/images/hously-2.png",
+    image: "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/49951a72-9000-47a3-827b-d534b839f9f1.png",
   },
   {
     id: 3,
