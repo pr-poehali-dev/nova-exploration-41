@@ -16,7 +16,13 @@ const projects = [
     category: "Двухместный · Comfort",
     location: "Мягкая палитра, уютная зона отдыха",
     year: "34 м²",
-    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/49951a72-9000-47a3-827b-d534b839f9f1.png"],
+    images: [
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/077992a1-ebd5-4828-b019-8b1d647f459f.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/1c456d1e-fd3f-4e0f-823c-f8a54de36a20.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/2d8408b3-a1df-4f98-8e51-280da5b6be70.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/c15e3a3b-a116-4a9d-8dfe-ef54d1c3a118.png",
+      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/f19a7e13-3351-40bb-a0ef-733ae060a097.png",
+    ],
   },
   {
     id: 3,
@@ -24,7 +30,7 @@ const projects = [
     category: "Семейный · Family",
     location: "Простор для всей семьи",
     year: "42 м²",
-    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/077992a1-ebd5-4828-b019-8b1d647f459f.png"],
+    images: ["https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/49951a72-9000-47a3-827b-d534b839f9f1.png"],
   },
   {
     id: 4,
@@ -32,12 +38,7 @@ const projects = [
     category: "Люкс · Suite",
     location: "Лучший вид и максимум комфорта",
     year: "54 м²",
-    images: [
-      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/1c456d1e-fd3f-4e0f-823c-f8a54de36a20.png",
-      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/2d8408b3-a1df-4f98-8e51-280da5b6be70.png",
-      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/c15e3a3b-a116-4a9d-8dfe-ef54d1c3a118.png",
-      "https://cdn.poehali.dev/projects/9b256539-8ffd-41f2-a75a-99c73a26b9a8/bucket/f19a7e13-3351-40bb-a0ef-733ae060a097.png",
-    ],
+    images: ["/images/hously-4.png"],
   },
 ]
 
